@@ -55,6 +55,7 @@ public class RotationInstruction
         var parts = match.Groups.Values.Skip(1).Select(g => g.Value).ToArray();
         Direction direction = parts[0] == "L" ? Direction.Left : Direction.Right;
         int steps = int.Parse(parts[1]);
+        
         return new RotationInstruction { Direction = direction, Steps = steps };
     }
 
